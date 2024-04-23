@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BankoOfDotNetAPI.Data;
 using BankoOfDotNetAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BankoOfDotNetAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CustomersController : ControllerBase
     {
         private readonly BankContext _context;
